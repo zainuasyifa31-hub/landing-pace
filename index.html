@@ -1,213 +1,312 @@
+
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jual Kambing Pak Supani</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jual kambing Pak Supani, Jimbe, Kademangan, Blitar. Menyediakan kambing berkualitas untuk kebutuhan Anda.">
+  <title>Jual Kambing Pak Supani | Blitar</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <a href="#home" class="logo">🐐 Pak Supani</a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#produk">Produk</a></li>
-                <li><a href="#testimoni">Testimoni</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-            </ul>
-            <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
-        </nav>
-    </header>
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">🐐 Pak Supani</a>
 
-    <!-- HERO SECTION -->
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Buka menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#keunggulan">Keunggulan</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <span class="tagline">🐐 Peternakan Pak Supani</span>
-            <h1>Jual Kambing Berkualitas, Sehat dan Terawat!</h1>
-            <p>
-                Menyediakan berbagai pilihan kambing berkualitas
-                untuk kebutuhan aqiqah, qurban, maupun peternakan.
-            </p>
-            <a href="#produk" class="btn">Lihat Produk</a>
-            <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
+      <div class="hero-content container">
+        <span class="hero-label">Peternakan Kambing Pak Supani</span>
+        <h1>Jual Kambing Berkualitas, Pilihan Tepat untuk Anda!</h1>
+        <p>
+          Menyediakan berbagai pilihan kambing untuk kebutuhan
+          aqiqah, qurban, maupun ternak. Berlokasi di Jimbe,
+          Kademangan, Blitar.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#produk" class="btn btn-primary">Lihat Produk</a>
+          <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
         </div>
+      </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="about section" id="about">
+    <section class="section about" id="about">
+      <div class="container about-grid">
         <div class="about-image">
-            <div class="about-emoji">🐐</div>
+          <img
+            src="https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=900&q=85"
+            alt="Kambing di peternakan">
         </div>
-        <div class="about-content">
-            <span class="subtitle">Tentang Kami</span>
-            <h2>Mengenal Peternakan Pak Supani</h2>
-            <p>
-                Jual Kambing Pak Supani merupakan usaha penjualan
-                kambing yang berlokasi di Jimbe, Kademangan, Blitar.
-                Kami menyediakan kambing pilihan dengan kondisi
-                sehat dan perawatan yang baik.
-            </p>
-            <p>
-                Kami berkomitmen memberikan pelayanan ramah,
-                harga bersahabat, dan membantu pelanggan memilih
-                kambing sesuai kebutuhan.
-            </p>
-            <div class="about-points">
-                <p>✓ Kambing sehat dan terawat</p>
-                <p>✓ Pilihan kambing beragam</p>
-                <p>✓ Pelayanan ramah dan terpercaya</p>
-            </div>
+
+        <div class="about-text">
+          <span class="section-label">Tentang Kami</span>
+          <h2>Mengenal Peternakan Kambing Pak Supani</h2>
+          <p>
+            Jual Kambing Pak Supani merupakan usaha penjualan
+            kambing yang berlokasi di Jimbe, Kecamatan Kademangan,
+            Kabupaten Blitar.
+          </p>
+          <p>
+            Kami menyediakan pilihan kambing untuk berbagai
+            kebutuhan, mulai dari aqiqah, qurban, hingga
+            kebutuhan peternakan.
+          </p>
+          <a href="#kontak" class="btn btn-primary">Pesan Sekarang</a>
         </div>
+      </div>
     </section>
 
     <!-- PRODUK -->
-    <section class="products section" id="produk">
+    <section class="section products" id="produk">
+      <div class="container">
         <div class="section-heading">
-            <span class="subtitle">Produk Kami</span>
-            <h2>Pilihan Kambing Berkualitas</h2>
-            <p>Pilih kambing sesuai kebutuhan Anda.</p>
+          <span class="section-label">Katalog Produk</span>
+          <h2>Pilihan Kambing Kami</h2>
+          <p>Pilih kambing sesuai kebutuhan Anda.</p>
         </div>
 
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image goat1">🐐</div>
-                <div class="product-info">
-                    <h3>Kambing Jawa</h3>
-                    <p>Kambing dengan ukuran beragam dan cocok untuk kebutuhan peternakan maupun konsumsi.</p>
-                    <span class="price">Harga: Hubungi Kami</span>
-                    <a href="#kontak" class="product-btn">Pesan Sekarang</a>
-                </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img
+              src="kambing 4.jfif"
+              alt="Kambing untuk aqiqah">
+            <div class="product-info">
+              <h3>Kambing Aqiqah</h3>
+              <p>
+                Pilihan kambing untuk memenuhi kebutuhan acara
+                aqiqah keluarga Anda.
+              </p>
+              <a href="#kontak" class="product-link">Tanya Produk →</a>
             </div>
+          </article>
 
-            <div class="product-card">
-                <div class="product-image goat2">🐐</div>
-                <div class="product-info">
-                    <h3>Kambing jawa</h3>
-                    <p>Kambing bertubuh tinggi dengan telinga panjang dan penampilan yang menarik.</p>
-                    <span class="price">Harga: Hubungi Kami</span>
-                    <a href="#kontak" class="product-btn">Pesan Sekarang</a>
-                </div>
+          <article class="product-card">
+            <img
+              src="foto kambing 1.jfif"
+              alt="Kambing untuk qurban">
+            <div class="product-info">
+              <h3>Kambing Qurban</h3>
+              <p>
+                Tersedia pilihan kambing untuk kebutuhan ibadah
+                qurban.
+              </p>
+              <a href="#kontak" class="product-link">Tanya Produk →</a>
             </div>
+          </article>
 
-            <div class="product-card">
-                <div class="product-image goat3">🐐</div>
-                <div class="product-info">
-                    <h3>Kambing untuk Qurban</h3>
-                    <p>Pilihan kambing untuk kebutuhan qurban dan acara keagamaan sesuai kriteria pembeli.</p>
-                    <span class="price">Harga: Hubungi Kami</span>
-                    <a href="#kontak" class="product-btn">Pesan Sekarang</a>
-                </div>
+          <article class="product-card">
+            <img
+              src="kambing 2.jfif"
+              alt="Kambing untuk ternak">
+            <div class="product-info">
+              <h3>Kambing Ternak</h3>
+              <p>
+                Pilihan kambing untuk Anda yang ingin memulai
+                atau mengembangkan usaha ternak.
+              </p>
+              <a href="#kontak" class="product-link">Tanya Produk →</a>
             </div>
+          </article>
         </div>
+
+        <p class="product-note">
+          *Jenis, ukuran, ketersediaan, dan harga kambing dapat
+          ditanyakan langsung kepada Pak Supani.
+        </p>
+      </div>
     </section>
 
     <!-- KEUNGGULAN -->
-    <section class="features section">
+    <section class="section features" id="keunggulan">
+      <div class="container">
         <div class="section-heading">
-            <span class="subtitle">Mengapa Memilih Kami?</span>
-            <h2>Keunggulan Pak Supani</h2>
+          <span class="section-label">Mengapa Memilih Kami?</span>
+          <h2>Keunggulan Pak Supani</h2>
         </div>
-        <div class="feature-container">
-            <div class="feature-card">
-                <div>🌿</div>
-                <h3>Perawatan Baik</h3>
-                <p>Kambing dirawat dan diperhatikan kondisinya.</p>
-            </div>
-            <div class="feature-card">
-                <div>💰</div>
-                <h3>Harga Bersahabat</h3>
-                <p>Harga dapat disesuaikan dengan jenis dan ukuran kambing.</p>
-            </div>
-            <div class="feature-card">
-                <div>🤝</div>
-                <h3>Pelayanan Ramah</h3>
-                <p>Siap membantu pelanggan memilih kambing yang sesuai.</p>
-            </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🐐</div>
+            <h3>Pilihan Beragam</h3>
+            <p>Tersedia pilihan kambing untuk berbagai kebutuhan.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Pelayanan Ramah</h3>
+            <p>Kami siap membantu menjawab pertanyaan pelanggan.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📍</div>
+            <h3>Lokasi Jelas</h3>
+            <p>Berada di Jimbe, Kademangan, Kabupaten Blitar.</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- TESTIMONI -->
-    <section class="testimonials section" id="testimoni">
+    <section class="section testimonials" id="testimoni">
+      <div class="container">
         <div class="section-heading">
-            <span class="subtitle">Testimoni Pelanggan</span>
-            <h2>Apa Kata Pelanggan?</h2>
+          <span class="section-label">Ulasan Pelanggan</span>
+          <h2>Apa Kata Pelanggan?</h2>
         </div>
-        <div class="testimonial-container">
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p>"Pelayanannya ramah dan pilihan kambingnya bagus. Sangat membantu!"</p>
-                <h4>— Bapak Ahmad</h4>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p>"Proses pemilihan kambing mudah dan penjualnya sangat informatif."</p>
-                <h4>— Bapak Budi</h4>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p>"Tempatnya mudah dicari dan pelayanannya memuaskan."</p>
-                <h4>— Bapak Rudi</h4>
-            </div>
+
+        <div class="testimonial-slider">
+          <article class="testimonial active">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Pelayanannya ramah dan informasinya jelas.
+              Terima kasih Pak Supani!"
+            </p>
+            <h3>Andi</h3>
+            <span>Pelanggan</span>
+          </article>
+
+          <article class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Pilihan kambingnya menarik dan proses
+              komunikasinya mudah."
+            </p>
+            <h3>Budi</h3>
+            <span>Pelanggan</span>
+          </article>
+
+          <article class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Lokasinya mudah ditanyakan dan pelayanannya
+              menyenangkan."
+            </p>
+            <h3>Siti</h3>
+            <span>Pelanggan</span>
+          </article>
+
+          <div class="slider-controls">
+            <button id="prevBtn" aria-label="Testimoni sebelumnya">❮</button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button id="nextBtn" aria-label="Testimoni berikutnya">❯</button>
+          </div>
         </div>
-        <p class="note">*Testimoni di atas merupakan contoh untuk tampilan website.</p>
+
+        <p class="product-note">
+          *Testimoni di atas merupakan contoh teks ilustrasi,
+          bukan ulasan pelanggan yang telah diverifikasi.
+        </p>
+      </div>
     </section>
 
     <!-- KONTAK -->
-    <section class="contact section" id="kontak">
-        <div class="section-heading">
-            <span class="subtitle">Hubungi Kami</span>
-            <h2>Pesan Kambing Sekarang!</h2>
-            <p>Silakan isi formulir berikut untuk bertanya atau memesan kambing.</p>
-        </div>
+    <section class="section contact" id="kontak">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="section-label">Hubungi Kami</span>
+          <h2>Ingin Memesan Kambing?</h2>
+          <p>
+            Silakan isi formulir di samping untuk bertanya
+            mengenai jenis kambing, harga, dan ketersediaan.
+          </p>
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Informasi Usaha</h3>
-                <p>📍 Jimbe, Kademangan, Blitar</p>
-                <p>🐐 Jual Kambing Pak Supani</p>
-                <p>💬 Hubungi kami untuk informasi harga dan ketersediaan.</p>
+          <div class="contact-detail">
+            <span>📍</span>
+            <div>
+              <h3>Alamat</h3>
+              <p>Jimbe, Kademangan, Blitar, Jawa Timur.</p>
             </div>
+          </div>
 
-            <form id="contactForm">
-                <label for="nama">Nama Lengkap</label>
-                <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
-
-                <label for="hp">Nomor HP</label>
-                <input type="tel" id="hp" placeholder="Masukkan nomor HP" required>
-
-                <label for="pertanyaan">Pertanyaan / Pesan</label>
-                <textarea id="pertanyaan" rows="5" placeholder="Tuliskan pertanyaan Anda..." required></textarea>
-
-                <button type="submit" class="btn">Kirim Pesan</button>
-            </form>
+          <div class="contact-detail">
+            <span>🐐</span>
+            <div>
+              <h3>Usaha</h3>
+              <p>Jual Kambing Pak Supani</p>
+            </div>
+          </div>
         </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <h3>Kirim Pertanyaan</h3>
+
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" placeholder="Masukkan nama Anda">
+          <small class="error" id="namaError"></small>
+
+          <label for="hp">Nomor HP</label>
+          <input type="tel" id="hp" placeholder="Contoh: 081234567890">
+          <small class="error" id="hpError"></small>
+
+          <label for="pertanyaan">Pertanyaan</label>
+          <textarea id="pertanyaan" rows="5"
+            placeholder="Tuliskan pertanyaan Anda..."></textarea>
+          <small class="error" id="pertanyaanError"></small>
+
+          <button type="submit" class="btn btn-primary form-button">
+            Kirim Pesan
+          </button>
+
+          <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
+  </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <h2>🐐 Jual Kambing Pak Supani</h2>
-            <p>Peternakan kambing berkualitas dan terpercaya.</p>
-            <p>📍 Jimbe, Kademangan, Blitar</p>
-            <div class="footer-links">
-                <a href="#home">Beranda</a>
-                <a href="#about">Tentang</a>
-                <a href="#produk">Produk</a>
-                <a href="#kontak">Kontak</a>
-            </div>
-            <p class="copyright">
-                © 2026 Jual Kambing Pak Supani. All Rights Reserved.
-            </p>
-        </div>
-    </footer>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <a href="#home" class="footer-logo">🐐 Pak Supani</a>
+        <p>Jual Kambing Pak Supani</p>
+        <p>Jimbe, Kademangan, Blitar, Jawa Timur.</p>
+      </div>
 
-    <script src="script.js"></script>
+      <div>
+        <h3>Navigasi</h3>
+        <a href="#about">Tentang Kami</a>
+        <a href="#produk">Produk</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+
+      <div>
+        <h3>Informasi</h3>
+        <p>Hubungi kami untuk informasi harga dan ketersediaan kambing.</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2026 Jual Kambing Pak Supani. Semua Hak Dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
+

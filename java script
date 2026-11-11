@@ -1,0 +1,158 @@
+
+// ===============================
+// MENU HAMBURGER
+// ===============================
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", function () {
+  const isOpen = navMenu.classList.toggle("active");
+
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+  menuToggle.setAttribute("aria-expanded", isOpen);
+});
+
+// Menutup menu setelah tautan diklik
+document.querySelectorAll(".nav-menu a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navMenu.classList.remove("active");
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+
+// ===============================
+// FORM VALIDATION
+// ===============================
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const nama = document.getElementById("nama").value.trim();
+  const hp = document.getElementById("hp").value.trim();
+  const pertanyaan = document.getElementById("pertanyaan").value.trim();
+
+  const namaError = document.getElementById("namaError");
+  const hpError = document.getElementById("hpError");
+  const pertanyaanError = document.getElementById("pertanyaanError");
+  const feedback = document.getElementById("formFeedback");
+
+  // Kosongkan pesan sebelumnya
+  namaError.textContent = "";
+  hpError.textContent = "";
+  pertanyaanError.textContent = "";
+  feedback.textContent = "";
+  feedback.className = "form-feedback";
+
+  let valid = true;
+
+  if (nama.length < 3) {
+    namaError.textContent = "Nama minimal 3 karakter.";
+    valid = false;
+  }
+
+  const nomorValid = /^[0-9+\s-]{8,16}$/.test(hp);
+
+  if (!nomorValid) {
+    hpError.textContent = "Masukkan nomor HP yang valid (8-16 karakter).";
+    valid = false;
+  }
+
+  if (pertanyaan.length < 5) {
+    pertanyaanError.textContent = "Pertanyaan minimal 5 karakter.";
+    valid = false;
+  }
+
+  if (!valid) {
+    feedback.textContent = "Periksa kembali data yang Anda masukkan.";
+    feedback.classList.add("failed");
+    return;
+  }
+
+  feedback.textContent =
+    "Terima kasih, " + nama + "! Data berhasil divalidasi.";
+
+  feedback.classList.add("success");
+
+  // Mengosongkan form setelah validasi berhasil
+  contactForm.reset();
+});
+
+
+// ===============================
+// TESTIMONIAL SLIDER
+// ===============================
+const testimonials = document.querySelectorAll(".testimonial");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const sliderDots = document.getElementById("sliderDots");
+
+let currentSlide = 0;
+let sliderTimer;
+
+function createDots() {
+  testimonials.forEach(function (_, index) {
+    const dot = document.createElement("button");
+
+    dot.classList.add("dot");
+    dot.setAttribute("aria-label", "Tampilkan testimoni " + (index + 1));
+
+    dot.addEventListener("click", function () {
+      showSlide(index);
+      restartTimer();
+    });
+
+    sliderDots.appendChild(dot);
+  });
+}
+
+function showSlide(index) {
+  testimonials.forEach(function (testimonial, i) {
+    testimonial.classList.toggle("active", i === index);
+  });
+
+  const dots = document.querySelectorAll(".dot");
+
+  dots.forEach(function (dot, i) {
+    dot.classList.toggle("active", i === index);
+  });
+
+  currentSlide = index;
+}
+
+function nextSlide() {
+  const next = (currentSlide + 1) % testimonials.length;
+  showSlide(next);
+}
+
+function previousSlide() {
+  const previous =
+    (currentSlide - 1 + testimonials.length) % testimonials.length;
+
+  showSlide(previous);
+}
+
+function restartTimer() {
+  clearInterval(sliderTimer);
+
+  sliderTimer = setInterval(function () {
+    nextSlide();
+  }, 5000);
+}
+
+prevBtn.addEventListener("click", function () {
+  previousSlide();
+  restartTimer();
+});
+
+nextBtn.addEventListener("click", function () {
+  nextSlide();
+  restartTimer();
+});
+
+createDots();
+showSlide(0);
+restartTimer();
+
